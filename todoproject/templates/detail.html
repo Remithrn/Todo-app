@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="shadow card text-center">
+    <div class="card-header">
+      <b>(class based view)Task Detail</b>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{task.name}}</h5>
+      <p class="card-text"><b>Priority:{{task.priority}}</b></p>
+      <a href="{% url 'todoapp:cbvdelete' task.id %}" class="btn btn-danger">Done</a>
+      <a href="{% url 'todoapp:cbvupdate' task.id %}" class="btn btn-info">Update</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      {{task.date}}
+    </div>
+  
+  </div>
+{% endblock %}

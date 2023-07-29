@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<br>
+<div class='box'>
+<form  method="POST" class="p3 shadow">
+    {% csrf_token %}
+    <table>
+    {{form.as_p}}
+    </table>
+    <button type="submit" class="btn btn-success">Submit</button> 
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <h2>Are you sure the task "{{task.name}}"  is finished?</h2>
+    <button type="submit" class="btn btn-success">YES</button> 
+    <a href="/" class="btn btn-danger">NO</a> 
+</form>
+{%endblock%}
